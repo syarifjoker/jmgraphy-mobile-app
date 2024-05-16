@@ -1,14 +1,15 @@
+import { SHADOW_OVERLAY, WHITE } from '@constants/Color';
 import {Dimensions, StyleSheet} from 'react-native';
 const {width} = Dimensions.get('window');
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#FFFFFF',
+    backgroundColor: WHITE,
     width: width / 2.5,
     borderRadius: 8,
     marginVertical: 12,
     elevation: 8,
-    shadowColor: 'rgba(0, 0, 0, 0.1)',
+    shadowColor: SHADOW_OVERLAY,
     shadowOffset: {
       width: 0,
       height: 4,
@@ -30,7 +31,7 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   detailContainer: {
-    marginVertical: 10,
+    marginVertical: 16,
   },
   imageContainer: {
     alignItems: 'center',

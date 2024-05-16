@@ -7,7 +7,6 @@ import {
   StyleSheet,
   TouchableOpacity,
   View,
-  Text,
   FlatList,
   SectionList,
   ScrollView,
@@ -15,6 +14,9 @@ import {
 
 import styles from './styles';
 import assets from '@assets';
+import {BLACK} from 'src/constants/Color';
+
+import Text from '@components/Text';
 
 const TileList = props => {
   const options = {
@@ -250,11 +252,10 @@ const TileList = props => {
             </View>
             <View style={styles.detailContainer}>
               <Text
-                style={{
-                  fontFamily: 'Montserrat',
-                  fontWeight: '400',
-                  fontSize: 16,
-                }}>
+                //   fontFamily: 'Montserrat',
+                style={{fontWeight: '500'}}
+                fontSize={16}
+                lineHeight={18}>
                 {item.item_name}
               </Text>
             </View>
@@ -269,11 +270,10 @@ const TileList = props => {
       <View style={styles.screenContainer}>
         <View style={{paddingBottom: 24}}>
           <Text
-            style={{
-              fontFamily: 'Montserrat',
-              fontWeight: '700',
-              fontSize: 20,
-            }}>
+            style={{fontWeight: '700'}}
+            fontSize={20}
+            lineHeight={24}
+            textAlign={'left'}>
             Items
           </Text>
           <FlatList
@@ -287,11 +287,10 @@ const TileList = props => {
         </View>
         <View style={{paddingBottom: 24}}>
           <Text
-            style={{
-              fontFamily: 'Montserrat',
-              fontWeight: '700',
-              fontSize: 20,
-            }}>
+            style={{fontWeight: '700'}}
+            fontSize={20}
+            lineHeight={24}
+            textAlign={'left'}>
             Expired
           </Text>
           <FlatList

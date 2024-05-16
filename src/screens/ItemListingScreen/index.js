@@ -1,33 +1,15 @@
 import React, {useRef} from 'react';
-import {Animated, Image, TouchableOpacity, View, Text} from 'react-native';
+import {Animated, Image, TouchableOpacity, View} from 'react-native';
 import * as Animatable from 'react-native-animatable';
 import {SafeAreaView} from 'react-native-safe-area-context';
 
 import styles from './styles';
 import TileList from '../../components/List/TileList';
+import {WHITE} from 'src/constants/Color';
+
+import Text from '@components/Text';
 
 export default function ItemListingScreen() {
-  //   const bgAnimate = useRef(new Animated.Value(1));
-
-  //   function bgScale() {
-  //     return {
-  //       transform: [
-  //         {
-  //           scale: bgAnimate.current.interpolate({
-  //             inputRange: [-200, 0, 1],
-  //             outputRange: [1.2, 1, 1],
-  //           }),
-  //         },
-  //         {
-  //           translateY: bgAnimate.current.interpolate({
-  //             inputRange: [-200, 0, 240],
-  //             outputRange: [0, 0, -100],
-  //           }),
-  //         },
-  //       ],
-  //     };
-  //   }
-
   return (
     <View style={styles.screen}>
       <SafeAreaView>
@@ -40,29 +22,33 @@ export default function ItemListingScreen() {
             paddingHorizontal: 24,
           }}>
           <View style={styles.headerScreen}>
-            <View style={{flex: 1}}>
-              <Text
-                style={{
-                  color: '#FFFFFF',
-                  fontFamily: 'Montserrat',
-                  fontWeight: '700',
-                  fontSize: 20,
-                }}>
-                Grocerieeez
-              </Text>
-            </View>
             <View
               style={{
                 alignItems: 'center',
                 justifyContent: 'center',
               }}>
               <Text
-                style={{
-                  color: '#FFFFFF',
-                  fontFamily: 'Montserrat',
-                  fontWeight: '700',
-                  fontSize: 14,
-                }}>
+                color={WHITE}
+                fontFamily={'Montserrat'}
+                style={{fontWeight: '700'}}
+                fontSize={20}
+                lineHeight={24}
+                textAlign={'left'}>
+                Grocerieeez
+              </Text>
+            </View>
+
+            <View
+              style={{
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}>
+              <Text
+                color={WHITE}
+                style={{fontWeight: '700'}}
+                fontSize={14}
+                lineHeight={20}
+                textAlign={'left'}>
                 Login
               </Text>
             </View>

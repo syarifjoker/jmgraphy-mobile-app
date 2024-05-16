@@ -1,26 +1,27 @@
+import {BACKGROUND_GREY, MAIN_BLUE} from '@constants/Color';
+import {Platform} from 'react-native';
 import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   screen: {
     alignItems: 'center',
     justifyContent: 'center',
-    // backgroundColor: '#FFFFFF',
     flex: 1,
-    backgroundColor: '#2478b7',
+    backgroundColor: MAIN_BLUE,
   },
   headerScreen: {
     width: '100%',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
     flexDirection: 'row',
-    paddingTop: 24,
+    paddingTop: Platform.OS === 'android' ? 72 : 24,
     marginVertical: 8,
+    flex: 1,
   },
   container: {
-    // paddingHorizontal: 24,
-    paddingBottom: 72,
+    paddingBottom: Platform.OS === 'android' ? 125 : 72,
     flex: 0,
-    backgroundColor: '#FFFFFF',
+    backgroundColor: BACKGROUND_GREY,
   },
   bgContainer: {
     bottom: 0,
