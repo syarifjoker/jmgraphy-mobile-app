@@ -1,5 +1,5 @@
-import { SHADOW_OVERLAY, WHITE } from '@constants/Color';
-import {Dimensions, StyleSheet} from 'react-native';
+import {SHADOW_OVERLAY, WHITE} from '@constants/Color';
+import {Dimensions, Platform, StyleSheet} from 'react-native';
 const {width} = Dimensions.get('window');
 
 const styles = StyleSheet.create({
@@ -7,6 +7,8 @@ const styles = StyleSheet.create({
     backgroundColor: WHITE,
     width: width / 2.5,
     borderRadius: 8,
+    borderWidth: Platform.OS === 'android' ? 2 : 0,
+    borderColor: Platform.OS === 'android' ? 'rgba(0,0,0,0.015)' : '',
     marginVertical: 12,
     elevation: 8,
     shadowColor: SHADOW_OVERLAY,

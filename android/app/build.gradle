@@ -74,9 +74,9 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace "com.jmgraphymobileapp"
+    namespace "com.syarifivappdemo"
     defaultConfig {
-        applicationId "com.jmgraphymobileapp"
+        applicationId "com.syarifivappdemo"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

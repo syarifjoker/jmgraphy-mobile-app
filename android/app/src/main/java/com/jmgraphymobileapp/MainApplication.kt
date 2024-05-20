@@ -1,4 +1,4 @@
-package com.jmgraphymobileapp
+package com.syarifivappdemo
 
 import android.app.Application
 import com.facebook.react.PackageList

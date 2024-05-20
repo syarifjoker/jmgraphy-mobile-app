@@ -9,7 +9,7 @@ import {WHITE} from 'src/constants/Color';
 
 import Text from '@components/Text';
 
-export default function ItemListingScreen() {
+export default function ItemListingScreen({productList}) {
   return (
     <View style={styles.screen}>
       <SafeAreaView>
@@ -55,7 +55,7 @@ export default function ItemListingScreen() {
           </View>
         </View>
         <View style={styles.container}>
-          <TileList />
+          <TileList data={productList} />
         </View>
       </SafeAreaView>
     </View>

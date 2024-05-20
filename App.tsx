@@ -9,13 +9,16 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
 import ItemListingScreen from './src/screens/ItemListingScreen';
 
+import itemList from './resources/jsonData/ItemList.json';
+
 function App(): React.JSX.Element {
+  console.log('azim dapat award :: ', itemList);
   return (
     <SafeAreaProvider style={styles.warp}>
-      <ItemListingScreen />
+      <ItemListingScreen productList={itemList} />
     </SafeAreaProvider>
   );
 }
